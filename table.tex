@@ -1,0 +1,112 @@
+\documentclass[twocolumn]{article}
+\usepackage{graphics}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\newcolumntype{d}{D{.}{.}{2}}
+
+\begin{document}
+\tableofcontents
+\section{Foo}
+
+
+\begin{table}[ht]
+\caption{table}
+\centering
+\begin{tabular}{|c|r|r|r|r|r|r|}
+\hline
+\multirow{2}*{ROUGE} &
+\multicolumn{3}{c|}{spearman} \\ \cline{2-4}
+    & case & segment & segment stop  \\ \hline
+ROUGE-1 & 0.72 & 0.72 & 0.69 \\ \hline
+ROUGE-2 & 0.72 & 0.72 & 0.69  \\ \hline
+ROUGE-3 & 0.72 & 0.72 & 0.69 \\ \hline
+
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+\begin{table}[ht]
+\caption{table}
+\centering
+\begin{tabular}{|c|r|r|r|r|r|r|}
+\hline
+\multirow{2}*{ROUGE} &
+\multicolumn{3}{c|}{spearman} &\multicolumn{3}{c|}{pearsonman} \\ \cline{2-7}
+    & case & segment & segment stop & case & segment & segment stop \\ \hline
+ROUGE-1 & 0.72 & 0.72 & 0.69 & 0.75 & 0.80 & 0.55 \\ \hline
+ROUGE-2 & 0.72 & 0.72 & 0.69 & 0.75 & 0.80 & 0.55 \\ \hline
+ROUGE-3 & 0.72 & 0.72 & 0.69 & 0.75 & 0.80 & 0.55 \\ \hline
+
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+
+\begin{tabular}{|c|r|r|}
+
+\hline
+\multirow{2}*{name} &
+\multicolumn{2}{c|}{score} \\ \cline{2-3}
+    & language & math \\ \hline
+zhangsan & 87 & 100 \\ \hline
+
+\end{tabular}
+
+
+\begin{tabular}{|c|r|r|}
+\hline
+& \multicolumn{2}{c|}{score} \\ \cline{2-3}
+name & language & math \\ \hline
+zhangsan & 87 &100 \\ \hline
+\end{tabular}
+
+
+\begin{tabular}{|r|r|}
+\hline
+\multicolumn{2}{|c|}{score} \\ \hline
+language & math \\ \hline
+87 & 100 \\ \hline
+\end{tabular}
+
+
+\begin{tabular}{|c|*{3}{d|}}
+\hline
+name & \multicolumn{1}{c|}{zhangsan} & \multicolumn{1}{c|}{lisi}
+& \multicolumn{1}{c|}{wangwu} \\ \hline
+income & 12345.6 & 5000 & 1020.55 \\ \hline
+pay    & 765.43 & 5120.5 & 98760  \\ \hline
+save   & 11580.17 & -120.5 & -97765.358 \\ \hline
+
+\end{tabular}
+
+\begin{tabular}{|c|rrr|p{4em}|}
+\hline
+   name & language & math & English & remark \\
+\hline
+   zhangsan & 87 & 100 & 93 & best \\
+   lisi     & 75 & 63 & \emph{52} & makeup \\
+   wangxiaoer & 80 & 82 & 78 & \\
+\hline
+\end{tabular}
+\subsection{blah}
+\begin{tabular}{|r|r|}
+\hline
+   output & input \\ \hline
+   $-2$ & 4 \\
+   0.01 & 	1.254 \\
+   2    & 458.47 \\
+\hline
+\end{tabular}
+\section{Bar}
+
+\begin{tabular}{lcr}
+left & center &right \\
+column left & column center 
+& column right\\
+\end{tabular}
+
+\begin{thebibliography}{2} % 这里的2是指参考文献总数目，需要根据实际情况进行修改
+    \bibitem{bib1} H.E.S.Said, T.Tan and K.Baker．Personal identification based on handwriting [J]．Pattern Recognition, 33:149-160, Jan. 2000
+    \bibitem{bib2} Lin, Chin-Yew. "Rouge: A package for automatic evaluation of summaries." Text Summarization Branches Out: Proceedings of the ACL-04 Workshop. 2004.
+\end{thebibliography}
+\end{document}
